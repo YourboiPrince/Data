@@ -2,6 +2,7 @@ const Student = require('../models/studentModels');
 const mongoose = require("mongoose");
 const createError = require('http-errors'); // Use http-errors instead of createerror
 const { signAccesToken} = require('../helpers/jwtHelper')
+
 const AddStudent = async (req, res, next) => {
     try {
         const student = new Student(req.body);
